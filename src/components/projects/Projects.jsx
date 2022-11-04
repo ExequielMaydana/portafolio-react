@@ -10,17 +10,17 @@ import ThemeContext from "../utils/ThemeContext";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const boxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  hidden: { opacity: 0, scale: 0 }
-};
-
 const Projects = () => {
 
   const {theme} = useContext(ThemeContext)
 
   const control = useAnimation();
   const [ref, inView] = useInView();
+
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0 }
+  };
 
 
   useEffect(() => {
