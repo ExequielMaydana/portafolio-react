@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import "./style/projectStyle.css";
-import imageRick from "../../assets/imgs/projects/Riky-app.jpg";
-import portadaRick from '../../assets/imgs/projects/portada-card-ricky.jpg'
-import portadaPoke from '../../assets/imgs/projects/portada-card-poke.jpg'
-import imagePoke from '../../assets/imgs/projects/app-poke.jpg'
-import portadaWheater from '../../assets/imgs/projects/portada-card-wheater.jpg'
-import imageWeather from '../../assets/imgs/projects/app-clima.png'
+import imageRick from "../../assets/imgs/projects-imgs/Riky-app.jpg";
+import portadaRick from '../../assets/imgs/projects-imgs/portada-card-ricky.jpg'
+import portadaPoke from '../../assets/imgs/projects-imgs/portada-card-poke.jpg'
+import imagePoke from '../../assets/imgs/projects-imgs/app-poke.jpg'
+import portadaWheater from '../../assets/imgs/projects-imgs/portada-card-wheater.jpg'
+import imageWeather from '../../assets/imgs/projects-imgs/app-clima.jpg'
 import ThemeContext from "../utils/ThemeContext";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
