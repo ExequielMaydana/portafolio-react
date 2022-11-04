@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.bg-light {
+    background-color: #EAEBED;
+    color: #17181c;
+}
+
+.bg-dark {
+    background-color: #17181c;
+    color: #EAEBED;
+}

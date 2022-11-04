@@ -1,0 +1,204 @@
+.container-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0 2em 0;
+}
+
+.form{
+    width: min(90%, 400px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    background-color: rgba(44, 44, 48, 0.5);
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.form-light{
+    background-color: #2A3240;
+}
+
+.form-title{
+    color: #EAEBED;
+    font-size: 1em;
+}
+
+.form-item{
+    width: 100%;
+    position: relative;
+}
+
+.form-item > input{
+    height: 30px;
+    width: 100%;
+    padding-left: 16px;
+    border: 2px solid #c9c9c9;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+    color: #f9f9f9;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-item :is(label, span) {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    pointer-events: none;
+    color: #f9f9f9;
+    transition: 0.3s;
+}
+
+.form-item > label {
+    left: 10px;
+    translate: 0 -50%;
+    padding: 0px 10px;
+    font-size: 13px;
+}
+
+.form-item > span {
+    right: 16px;
+    font-size: 18px;
+}
+
+.form-item > :is(input:focus, .has-value){
+    border-color: #4672f3;
+}
+
+.form-item > :is(input:focus, .has-value, .has-value-input) ~ span{
+    color: #f9f9f9;
+}
+
+.form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
+    background: #151515;
+    color: rgba(255, 255, 255, 0.75);
+    translate: 0 -27px;
+}
+
+.form-item > textarea{
+    width: 100%;
+    height: 60px;
+    resize: none;
+    outline: none;
+    border: 2px solid #f9f9f9;
+    background: transparent;
+    color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.form-item > :is(textarea:focus, .has-value-text){
+    border-color: #4672f3;
+}
+
+.form-item > :is(textarea:focus, .has-value-text) ~ label {
+    background: #151515;
+    color: rgba(255, 255, 255, 0.75);
+    translate: 0 -40px;
+}
+
+.form-btn{
+    width: 60%;
+    height: 2em;
+    border: 2px solid #f9f9f9;
+    background: transparent;
+    color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 200ms ease-out;
+}
+
+.form-btn:hover{
+    border-color: #4672f3;
+    transition: 200ms ease-out;
+}
+
+@media screen and (min-width: 420px){
+    .form-title {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .form-item > input{
+        height: 40px;
+    }
+
+    .form-item > textarea{
+        height: 90px;
+    }
+
+    .form-btn{
+        height: 2.5em;
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 720px){
+    .form{
+        width: 600px;
+    }
+
+    .form > h3 {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    .form-item > input{
+        height: 40px;
+    }
+
+    .form-item > label {
+        font-size: 16px;
+    }
+    
+    .form-item > span {
+        right: 16px;
+        font-size: 22px;
+    }
+    
+
+    .form-item > textarea{
+        height: 90px;
+    }
+
+    .form-btn{
+        height: 2.5em;
+        font-size: 1em;
+    }
+
+    .form-item > :is(textarea:focus, .has-value-text) ~ label {
+        translate: 0 -60px;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .form{
+        width: 700px;
+    }
+
+    .form-item > input{
+        height: 60px;
+    }
+
+    .form-item > textarea{
+        height: 150px;
+    }
+
+    .form-btn{
+        height: 2.5em;
+        font-size: 1em;
+    }
+
+    .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
+        translate: 0 -40px;
+    }
+
+    .form-item > :is(textarea:focus, .has-value-text) ~ label {
+        translate: 0 -87px;
+    }
+
+}

@@ -1,0 +1,499 @@
+:root{
+    --d1: 0s;
+    --d2: 4s;
+    --d3: 8s;
+}
+
+.home {
+    width: 100%;
+    padding: 7em 0 1em 0;
+    position: relative;
+}
+
+/* estos .div-name son los circulos, cuadrados y demas que hay de background en el home */
+
+.home .div-circle{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(22, 59, 133, 0.5);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+/* este estilo se aplica cuando el background cambie a light */
+.home .style-light-circle{
+    background-color: rgba(22, 59, 133, 0.5);
+}
+
+.home .div-circle1{
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(0, 217, 255); 
+    background: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* este estilo se aplica cuando el background cambie a light */
+.home .style-light-circle1{
+    background-color: rgb(0, 217, 255, 0.5);
+}
+
+.home .div-circle2{
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(60, 65, 75, 0.5);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+/* este estilo se aplica cuando el background cambie a light */
+.home .style-light-circle2{
+    background-color: rgba(120, 68, 227, 0.5);
+}
+
+.home .div-cuadrado{
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(255, 251, 0); 
+    background: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.home .style-light-cuadrado{
+    background-color: rgb(247, 244, 75, 0.5);
+    border: none;
+}
+
+.home .div-cuadrado1{
+    position: absolute;
+    top: 130px;
+    right: 50px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(140, 175, 244, 0.5);
+    opacity: 1;
+    border-radius: 1px;
+}
+
+.home .style-light-cuadrado1{
+    background-color: #7844E3;
+}
+
+
+.name-profession {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.name-profession .title{
+    text-align: start;
+}
+
+.title{
+    position: relative;
+    color: #EAEBED;
+    font-weight: 900;
+    font-size: 1em;
+    padding-left: 2px;
+}
+
+.style-light-title{
+    color: #17181C;
+}
+
+
+.rotate-words{
+    display: inline;
+    margin-left: 10px;
+}
+
+.rotate-words span:nth-child(1){
+    animation-delay: 0s;
+}
+
+.rotate-words span:nth-child(2){
+    animation-delay: 4s;
+}
+
+.rotate-words span:nth-child(3){
+    animation-delay: 8s;
+}
+
+.rotate-words span{
+    width: max-content;
+    position: absolute;
+    background-color: #4672f3;
+    color: #EAEBED;
+    padding-inline: 2px;
+    opacity: 0;
+    transform-origin: 10% 75%;
+    animation: rotateWords 12s linear infinite;
+    border-radius: 2px;
+}
+
+.rotate-words-light span {
+    background-color: #7844E3;
+}
+
+@keyframes rotateWords{
+    5%{
+        opacity: 1;
+    }
+    10%,
+    20%{
+        opacity: 1;
+        transform: rotate(3deg);
+    }
+    15%{
+        transform: rotate(-1deg);
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(90px) rotate(10deg);
+    }
+}
+
+
+.image {
+    max-width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.avatar {
+    width: 14rem;
+    height: 14rem;
+
+    border-radius: 50% 50% 46% 54% / 51% 47% 53% 49%;
+
+    background: url('../../../assets/imgs/yo.png');
+    background-size: cover;
+
+    animation: glitch 3.75s infinite steps(1);
+    filter: drop-shadow(1px 1px 2px #4672f3);
+}
+
+.avatar-light{
+    filter: drop-shadow(1px 1px 2px #7844E3);
+}
+
+@keyframes glitch {
+
+    0%,
+    55.1%,
+    100% {
+        background: url("../../../assets/imgs/yo.png");
+        background-size: cover;
+    }
+
+    50% {
+        background: url("../../../assets/imgs/glitch/exe-glitch-1.png");
+        background-size: cover;
+    }
+
+    52.5% {
+        background: url("../../../assets/imgs/glitch/exe-glitch-2.png");
+        background-size: cover;
+    }
+
+    55% {
+        background: url("../../../assets/imgs/glitch/exe-glitch-3.png");
+        background-size: cover;
+    }
+}
+
+.redes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-icon-redes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 50px 0 0;
+}
+
+.list__item{
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: 2px solid #EAEBED;
+    transition-property: outline-offset, outline-color,
+    background-color;
+    transition-duration: .25s;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* este estilo se aplica cuando el background cambie a light */
+.list__item-light{
+    outline: 2px solid #17181C;
+    box-shadow: 0px 1px 6px #7844E3;
+}
+
+.list__link{
+    color: #EAEBED;
+}
+
+/* este estilo se aplica cuando el background cambie a light */
+.list_link-light{
+    color: #17181C;
+}
+
+.list__item:hover{
+    outline-offset: 4px;
+}
+
+.list__link i {
+    animation: snake .25s;
+    font-size: 1.2em;
+}
+
+.list__item-instagram:hover{
+    background-image: radial-gradient(circle at 30% 107%,
+    #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%,
+    #285AEB 90%);
+    outline-color: #A02D76;
+    box-shadow: none;
+}
+
+.list__item-twitter:hover{
+    background-color: #1DA1F2;
+    outline-color: #1DA1F2 ;
+    box-shadow: none;
+}
+
+.list__item-linkedin:hover{
+    background-color: #0077B5;
+    outline-color: #0077B5;
+    box-shadow: none;
+}
+
+.list__item-github:hover{
+    background-color: #42506B;
+    outline-color: #42506B;
+    box-shadow: none;
+}
+
+@media screen and (min-width: 320px){
+    .title{
+        font-size: 1.1em;
+    }
+
+    .avatar {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .list__item{
+        width: 50px;
+        height: 50px;
+        aspect-ratio: 1;
+    }
+}
+
+@media screen and (min-width: 420px){
+
+    .title{
+        padding-left: 2em;
+        font-size: 1.5em;
+    }
+
+    .avatar {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .list__item{
+        width: 50px;
+        height: 50px;
+        aspect-ratio: 1;
+    }
+}
+
+@media screen and (min-width: 620px){
+    .home {
+        width: 100%;
+        padding: 7em 0 2em 0;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .title{
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    .name-profession {
+        align-items: flex-start;
+    }
+
+    .avatar{
+        width: 18rem;
+        height: 18rem;
+    }
+
+
+    .redes{
+        width: 30%;
+    }
+
+    .container-icon-redes{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .list__item{
+        width: 70px;
+        height: 70px;
+    }
+    
+    .list__link{
+        color: #EAEBED;
+    }
+    
+    /* este estilo se aplica cuando el background cambie a light */
+    .list_link-light{
+        color: #17181C;
+    }
+    
+    .list__item:hover{
+        outline-offset: 5px;
+    }
+    
+    .list__link i {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    .home {
+        width: 100%;
+        padding: 7em 0 2em 0;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .container-icon-redes{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .avatar{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .name-profession {
+        align-items: flex-start;
+    }
+
+    .title{
+        font-size: 1.7em;
+    }
+
+    .list__item{
+        width: 70px;
+        height: 70px;
+    }
+    
+    .list__link{
+        color: #EAEBED;
+    }
+    
+    /* este estilo se aplica cuando el background cambie a light */
+    .list_link-light{
+        color: #17181C;
+    }
+    
+    .list__item:hover{
+        outline-offset: 5px;
+    }
+    
+    .list__link i {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1228px){
+    .home {
+        width: 100%;
+        padding: 7em 0 2em 0 ;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 5em;
+    }
+
+    .name-profession{
+        width: 40%;
+    }
+ 
+    .title{
+        font-size: 2em;
+    }
+
+    .redes{
+        width: 30%;
+    }
+
+    .list__item{
+        width: 70px;
+        height: 70px;
+    }
+    
+    .list__link{
+        color: #EAEBED;
+    }
+    
+    /* este estilo se aplica cuando el background cambie a light */
+    .list_link-light{
+        color: #17181C;
+    }
+    
+    .list__item:hover{
+        outline-offset: 5px;
+    }
+    
+    .list__link i {
+        font-size: 2em;
+    }
+}

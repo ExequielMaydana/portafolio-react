@@ -1,0 +1,225 @@
+.container-projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-projects-title{
+    max-width: 100%;
+    text-align: start;
+    padding-left: 1em;
+    padding-bottom: 1.5em;
+}
+
+.projects-title{
+    font-size: 2em;
+    font-weight: 700;
+    border-bottom: 1px solid #4672f3;
+}
+
+.projects-title-light{
+    border-bottom: 1px solid #7844E3;
+}
+
+.container-card-projects{
+    width: 100%;
+    padding: 0 0.3em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.card-project{
+    position: relative;
+    width: min(100%, 400px);
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(44, 44, 48, 0.5);
+    border-radius: 0.2em;
+}
+
+.card-project-light{
+    background-color: #2A3240;
+}
+
+.container-img-project{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5em;
+}
+
+.project-img-front{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.2em;
+    transition: opacity 400ms ease-out;
+    opacity: 1;
+}
+
+.project-img-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    border-radius: 0.2em;
+    transition: opacity 400ms ease-out;
+    opacity: 0;
+}
+
+.container-img-project:hover .project-img-front{
+    transition: opacity 400ms ease-out;
+    opacity: 0;
+}
+
+.container-img-project:hover .project-img-back{
+    transition: opacity 400ms ease-out;
+    opacity: 1;
+}
+
+.card-text{
+    font-size: 0.6em;
+    text-align: start;
+    padding-left: 0.3em;
+    color: #EAEBED;
+}
+
+.card-tecnologias{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.3em;
+    padding-top: 0.1em;
+    gap: 0.2em;
+}
+
+.icon-project{
+    font-size: 1.2em;
+}
+
+.project-github{
+    position: absolute;
+    bottom: 0em;
+    right: 2em;
+    font-size: 1.2em;
+    transition: 200ms ease-in;
+}
+
+.project-diploy{
+    position: absolute;
+    bottom: 0em;
+    right: 0.5em;
+    font-size: 1.2em;
+    transition: 200ms ease-in;
+}
+
+.project-enlace-text{
+    font-size: 0.4em;
+    visibility: hidden;
+    transition: 200ms ease-in;
+}
+
+.project-github:hover p{
+    visibility: visible;
+    transition: 200ms ease-in;
+}
+
+.project-github:hover .project-code{
+    color: #4672f3;
+    transition: 200ms ease-in;
+    transform: scale(1.10);
+}
+
+.project-github:hover .project-code-light{
+    color: #7844E3;
+}
+
+.project-diploy:hover p{
+    visibility: visible;
+    transition: 200ms ease-in;
+}
+
+.project-diploy:hover .project-probe{
+    color: #4672f3;
+    transition: 200ms ease-in;
+    transform: scale(1.10);
+}
+
+.project-diploy:hover .project-probe-light{
+    color: #7844E3;
+}
+
+@media screen and (min-width: 420px){
+
+    .card-text{
+        font-size: 1em;
+    }
+
+    .icon-project{
+        font-size: 1.7em;
+    }
+
+    .project-github{
+        font-size: 1.7em;
+    }
+    
+    .project-diploy{
+        font-size: 1.7em;
+
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    .container-projects{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-title{
+        font-size: 3em;
+        border-bottom: 2px solid #4672f3;
+    }
+
+    .projects-title-light{
+        border-bottom: 2px solid #7844E3;
+    }
+
+    .container-img-project{
+        height: 300px;
+    }
+    
+
+    .card-project{
+        width: min(100%, 500px);
+    }
+
+    .card-text{
+        font-size: 1.5em;
+    }
+
+    
+    .icon-project{
+        font-size: 2em;
+    }
+    
+    .project-github{
+        font-size: 1.7em;
+    }
+    
+    .project-diploy{
+        font-size: 1.7em;
+    }
+
+
+    
+}

@@ -1,0 +1,289 @@
+/** mobile */
+.header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(44, 44, 48);
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img{
+    padding: 10px;
+    width: 50px;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px #EAEBED);
+}
+
+.menu-burger{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.menu-burger span {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    height: 3px;
+    background: #EAEBED;
+    transition: transform 300ms;
+    transform-origin: 0px 100%;
+}
+
+.activeLine1 {
+    transform: rotate(45deg) translate(-0.5px, -1px);
+}
+
+.activeLine2 {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activeLine3 {
+    transform: rotate(-45deg) translate(4px, 1px);
+}
+
+.nav{
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+
+    /* Este left es para que se oculte hacia la derecha */
+    left: 100%;
+    transition: 1.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+
+    background-color: #17181C;
+    box-shadow: 0 1px 1px #4672f3;
+    z-index: 1;
+}
+
+.openMenu{
+    /* aqui le sacamos el 100% del left que tiene por defecto para que se muestre */
+    left: 0;
+    transition: 1.3s;
+}
+
+.nav-menu{
+    padding: 0;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px 0;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+.icon, a{
+    color: #EAEBED;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.darkmode{
+    position: relative;
+}
+
+.container-dark{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 0px;
+    padding: 0;
+    margin-top: 10px;
+
+}
+
+.mode{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sun, .moon{
+    color: #EAEBED;
+    font-size: 1.2em;
+}
+
+#checkbox{
+    display: none;
+}
+
+.toggler{
+    display: block;
+    width: 60px;
+    height: 31px;
+    border: 2px solid #4672f3;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ball,
+.sun,
+.moon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ball{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #4672f3;
+    border-radius: 50%;
+    left: 1px;
+    z-index: 10;
+    transition: transform .5s ease-in-out;
+}
+
+.sun{
+    right: 5px;
+}
+
+.moon{
+    left: 5px;
+}
+
+#checkbox:checked + .ball{
+    transform: translate(29px, -50%);
+}
+
+.nav-footer{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.nav-footer-text{
+    padding: 10px;
+    font-weight: 900;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-separation{
+    width: 70%;
+    border-top: 1px solid #4672f3;
+    margin-bottom: 10px;
+}
+
+.footer-separation-light{
+    border-top: 1px solid #7844E3;
+}
+
+.nav-footer-text b {
+    color: #4672f3;
+    font-weight: 900;
+}
+
+.nav-footer-text-light b {
+    color: #7844E3;
+}
+
+.nav-footer-text-light {
+    color: #EAEBED;
+}
+
+.nav-footer-text span {
+    font-weight: 400;
+}
+
+@media screen and (min-width: 420px){
+
+    .logo-container img{
+        padding: 10px;
+        width: 60px;
+        cursor: pointer;
+        filter: drop-shadow(2px 2px 4px #EAEBED);
+    }
+    
+}
+
+@media screen and (min-width: 992px){
+    .header{
+        height: 80px;
+        justify-content: space-around;
+    }
+
+    .logo-container img{
+        padding: 10px;
+        width: 70px;
+    }
+
+    .menu-burger{
+        display: none;
+    }
+
+    .nav{
+        display: contents;
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links{
+        margin: 0 20px 0 0;
+    }
+
+    .icon{
+        margin-right: 5px;
+    }
+
+    .darkmode{
+        position: relative;
+        padding-left: 1em;
+    }
+    
+    .container-dark{
+        position: absolute;
+        width: 100%;
+        top: -24px;
+        padding: 0;
+    }
+    
+    .mode{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .nav-footer{
+        display: none;
+    }
+
+}
