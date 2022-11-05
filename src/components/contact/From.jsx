@@ -48,8 +48,8 @@ const [valueTextArea, setValueTextArea] = useState('')
     animate={control}
     className='container-form'
     >
-        <form className={`form ${theme === 'bg-light' && 'form-light'}`}>
-        <input type="hidden" name="form-name" value="contact" />
+        <form className={`form ${theme === 'bg-light' && 'form-light'}`} method="POST">
+        <input type="hidden" name="form-name" value="contact" method="POST"/>
           <h3 className='form-title'>¡Creemos algo juntos!</h3>
             <div className='form-item'>
                <input 
@@ -86,7 +86,7 @@ const [valueTextArea, setValueTextArea] = useState('')
               </textarea>
               <label htmlFor='textbox'>Deje su mensaje aqui...</label>
             </div>
-            <button onClick={handleChangeName} type="submit" className={`form-btn ${theme === 'bg-light' && 'form-btn-light'}`}>Submit</button>
+            <button  type="submit" className={`form-btn ${theme === 'bg-light' && 'form-btn-light'}`}>Submit</button>
         </form>
     </motion.section>
   )
