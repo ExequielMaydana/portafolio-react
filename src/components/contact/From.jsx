@@ -48,7 +48,7 @@ const [valueTextArea, setValueTextArea] = useState('')
     animate={control}
     className='container-form'
     >
-        <article className={`form ${theme === 'bg-light' && 'form-light'}`}>
+        <form className={`form ${theme === 'bg-light' && 'form-light'}`} name="contact" method="POST" data-netlify="true">
           <h3 className='form-title'>¡Creemos algo juntos!</h3>
             <div className='form-item'>
                <input 
@@ -85,8 +85,8 @@ const [valueTextArea, setValueTextArea] = useState('')
               </textarea>
               <label htmlFor='textbox'>Deje su mensaje aqui...</label>
             </div>
-            <button onClick={handleChangeName} className={`form-btn ${theme === 'bg-light' && 'form-btn-light'}`}>Submit</button>
-        </article>
+            <button onClick={handleChangeName} type="submit" className={`form-btn ${theme === 'bg-light' && 'form-btn-light'}`}>Submit</button>
+        </form>
     </motion.section>
   )
 }
