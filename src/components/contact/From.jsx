@@ -48,7 +48,7 @@ const [valueTextArea, setValueTextArea] = useState('')
     animate={control}
     className='container-form'
     >
-        <form className={`form ${theme === 'bg-light' && 'form-light'}`} name="contact" method="POST">
+        <form className={`form ${theme === 'bg-light' && 'form-light'}`} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
           <h3 className='form-title'>¡Creemos algo juntos!</h3>
             <div className='form-item'>
