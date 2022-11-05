@@ -53,6 +53,7 @@ const [valueTextArea, setValueTextArea] = useState('')
           <h3 className='form-title'>¡Creemos algo juntos!</h3>
             <div className='form-item'>
                <input 
+                name="name"
                 onChange={e => setValueName(e.target.value)}
                 className={`${valueName ? 'has-value has-value-input' : ''} ${theme === 'bg-light' && 'has-value-light has-value-light'}`}
                 value={valueName}
@@ -65,6 +66,7 @@ const [valueTextArea, setValueTextArea] = useState('')
             </div>
             <div className='form-item'>
             <input 
+              name="email"
                 onChange={e => setValueEmail(e.target.value)}
                 className={`${valueEmail ? 'has-value has-value-input' : ''} ${theme === 'bg-light' && 'has-value-light has-value-light'}`}
                 value={valueEmail}
@@ -77,6 +79,7 @@ const [valueTextArea, setValueTextArea] = useState('')
             </div>
             <div className='form-item'>
               <textarea
+                  name="message"
                   onChange={e => setValueTextArea(e.target.value)}
                   className={`${valueTextArea ? 'has-value-text' : ''} ${theme === 'bg-light' && 'has-value-text-light'}`}
                   value={valueTextArea}
