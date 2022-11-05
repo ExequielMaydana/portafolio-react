@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import ThemeContext from '../utils/ThemeContext'
@@ -18,14 +17,6 @@ const {theme} = useContext(ThemeContext)
 const [valueName, setValueName] = useState('')
 const [valueEmail, setValueEmail] = useState('')
 const [valueTextArea, setValueTextArea] = useState('')
-
-
-  const handleChangeName = () => {
-    console.log(`${valueName}, ${valueEmail}, ${valueTextArea}`);
-      setValueName('')
-      setValueEmail('')
-      setValueTextArea('')
-  }
 
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -89,7 +80,7 @@ const [valueTextArea, setValueTextArea] = useState('')
               </textarea>
               <label htmlFor='textbox'>Deje su mensaje aqui...</label>
             </div>
-            <button  type="submit" className={`form-btn ${theme === 'bg-light' && 'form-btn-light'}`}>Submit</button>
+            <button type="submit" className={`form-btn ${theme === 'bg-light' && 'form-btn-light'}`}>Submit</button>
         </form>
     </motion.section>
   )
