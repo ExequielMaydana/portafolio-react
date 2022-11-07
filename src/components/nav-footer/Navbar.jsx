@@ -19,13 +19,14 @@ const Navbar = () => {
     lineThreeActive.current?.classList.toggle("activeLine3");
   };
 
-  // const openSetting = () => {
-  //   openSettings.current?.classList.toggle("openSettings");
-  //   rotateSettings.current?.classList.toggle("rotateSetting");
-  // };
+  const closeMenu = () => {
+    navbarOpen.current?.classList.toggle("openMenu");
+    lineOneActive.current?.classList.toggle("activeLine1");
+    lineTwoActive.current?.classList.toggle("activeLine2");
+    lineThreeActive.current?.classList.toggle("activeLine3");
+  };
 
-
-  const {theme, updateTheme} = useContext(ThemeContext)
+  const { theme, updateTheme } = useContext(ThemeContext);
   return (
     <header className="header">
       <div className="logo-container">
@@ -42,23 +43,33 @@ const Navbar = () => {
         <ul className="nav-menu">
           <li className="nav-links">
             <i className="bx bx-home icon"></i>
-            <a href="#">Inicio</a>
+            <a onClick={closeMenu} href="#home" className="link">
+              Inicio
+            </a>
           </li>
           <li className="nav-links">
             <i className="bx bx-user icon"></i>
-            <a href="#">Sobre mi</a>
+            <a onClick={closeMenu} href="#sobreMi">
+              Sobre mi
+            </a>
           </li>
           <li className="nav-links">
             <i className="bx bx-code-alt icon"></i>
-            <a href="#">Habilidades</a>
+            <a onClick={closeMenu} href="#sobreMi">
+              Habilidades
+            </a>
           </li>
           <li className="nav-links">
             <i className="bx bx-folder icon"></i>
-            <a href="#">Proyectos</a>
+            <a onClick={closeMenu} href="#projects">
+              Proyectos
+            </a>
           </li>
           <li className="nav-links">
             <i className="bx bx-chat icon"></i>
-            <a href="#">Contacto</a>
+            <a onClick={closeMenu} href="#contactMe">
+              Contacto
+            </a>
           </li>
 
           <li className="darkmode">
@@ -66,7 +77,14 @@ const Navbar = () => {
               <li className="mode">
                 <label form="checkbox" className="toggler">
                   <input type="checkbox" id="checkbox" />
-                  <span className="ball" onClick={() => theme === 'bg-dark' ? updateTheme('bg-light') : updateTheme('bg-dark')}></span>
+                  <span
+                    className="ball"
+                    onClick={() =>
+                      theme === "bg-dark"
+                        ? updateTheme("bg-light")
+                        : updateTheme("bg-dark")
+                    }
+                  ></span>
                   <i className="fa-solid fa-moon moon"></i>
                   <i className="fa-solid fa-sun sun"></i>
                 </label>
@@ -75,12 +93,23 @@ const Navbar = () => {
           </li>
         </ul>
         <footer className="nav-footer">
-          <div className={`nav-footer-text ${theme === 'bg-light' ? 'nav-footer-text-light' : 'nav-footer-text'}`}>
-          <span className={`footer-separation ${theme === 'bg-light' ? 'footer-separation-light' : 'footer-separation'}`}></span>
-          <p>&copy; Exequiel Maydana <b>Developer.</b></p>
-          <span>Todos los derechos reservados.</span>
+          <div
+            className={`nav-footer-text ${
+              theme === "bg-light" ? "nav-footer-text-light" : "nav-footer-text"
+            }`}
+          >
+            <span
+              className={`footer-separation ${
+                theme === "bg-light"
+                  ? "footer-separation-light"
+                  : "footer-separation"
+              }`}
+            ></span>
+            <p>
+              &copy; Exequiel Maydana <b>Developer.</b>
+            </p>
+            <span>Todos los derechos reservados.</span>
           </div>
-  
         </footer>
       </nav>
     </header>

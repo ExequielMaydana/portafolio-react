@@ -3,7 +3,6 @@ import { useState  } from "react";
 import AboutMe from "./components/about-me/AboutMe";
 import Home from "./components/home/Home";
 import Navbar from "./components/nav-footer/Navbar";
-import Skills from "./components/skills/Skills";
 import ThemeContext from "./components/utils/ThemeContext";
 import Projects from "./components/projects/Projects";
 import From from "./components/contact/From";

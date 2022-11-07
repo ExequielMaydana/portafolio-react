@@ -360,7 +360,8 @@
     }
 
     .name-profession {
-        align-items: flex-start;
+        padding-left: 4em;
+        align-items: center;
     }
 
     .avatar{
@@ -370,7 +371,7 @@
 
 
     .redes{
-        width: 30%;
+        width: 10%;
     }
 
     .container-icon-redes{
@@ -464,15 +465,16 @@
     }
 
     .name-profession{
-        width: 40%;
+        width: 100%;
+        padding-left: 5em;
     }
  
     .title{
-        font-size: 2em;
+        font-size: 1.7em;
     }
 
     .redes{
-        width: 30%;
+        width: 15%;
     }
 
     .list__item{
