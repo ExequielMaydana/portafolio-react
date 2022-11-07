@@ -3,6 +3,8 @@ import "./style/projectStyle.css";
 import imageRick from "../../assets/imgs/projects-imgs/Riky-app.jpg";
 import portadaRick from "../../assets/imgs/projects-imgs/portada-card-ricky.jpg";
 import portadaPoke from "../../assets/imgs/projects-imgs/portada-card-poke.jpg";
+import portadaWeather from '../../assets/imgs/projects-imgs/portada-card-wheater.jpg'
+import imageWeather from '../../assets/imgs/projects-imgs/App-clima.jpg'
 import imagePoke from "../../assets/imgs/projects-imgs/app-poke.jpg";
 import portadaCommerce from '../../assets/imgs/projects-imgs/in-progres-e-commerce.jpg'
 import imageCommerce from '../../assets/imgs/projects-imgs/e-commerce.jpg'
@@ -180,13 +182,13 @@ const Projects = () => {
               ></i>
             </a>
           </article>
-          {/* <article
+          <article
           className={`card-project ${
             theme === "bg-light" ? "card-project-light" : "card-project"
           }`}
         >
           <figure className="container-img-project">
-            <img src={portadaWheater} alt="" className="project-img-front" />
+            <img src={portadaWeather} alt="" className="project-img-front" />
             <img src={imageWeather} alt="" className="project-img-back" />
           </figure>
           <p className="card-text">Tecnologias usadas</p>
@@ -204,7 +206,7 @@ const Projects = () => {
               }`}
             ></i>
           </a>
-          <a href="#" target="_blank" className="project-diploy">
+          <a href="https://app-weather-exedev.netlify.app/" target="_blank" className="project-diploy">
             <p className="project-enlace-text">App</p>
             <i
               className={`fa-solid fa-globe project-probe ${
@@ -212,7 +214,7 @@ const Projects = () => {
               }`}
             ></i>
           </a>
-        </article> */}
+        </article>
         </div>
       </motion.section>
           <div className="squares1"></div>

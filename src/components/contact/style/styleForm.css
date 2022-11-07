@@ -57,12 +57,12 @@
     left: 10px;
     translate: 0 -50%;
     padding: 0px 10px;
-    font-size: 13px;
+    font-size: 0.6em;
 }
 
 .form-item > span {
     right: 16px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .form-item > :is(input:focus, .has-value){
@@ -76,7 +76,7 @@
 .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
     background: #151515;
     color: rgba(255, 255, 255, 0.75);
-    translate: 0 -27px;
+    translate: 0 -22px;
 }
 
 .form-item > textarea{
@@ -90,6 +90,11 @@
     border-radius: 8px;
 }
 
+.form-item > textarea + label {
+    font-size: 0.6em;
+    height: 15px;
+}
+
 .form-item > :is(textarea:focus, .has-value-text){
     border-color: #4672f3;
 }
@@ -98,6 +103,11 @@
     background: #151515;
     color: rgba(255, 255, 255, 0.75);
     translate: 0 -40px;
+}
+
+
+.form-item > textarea{
+    padding: 1em 0 0 0.5em;
 }
 
 .form-btn{
@@ -126,13 +136,38 @@
         height: 40px;
     }
 
+    .form-item > label {
+        font-size: 0.8em;
+    }
+    
+    .form-item > span {
+        right: 16px;
+        font-size: 1.3em;
+    }
+    
+
+    .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
+        translate: 0 -30px;
+    }
+
     .form-item > textarea{
         height: 90px;
+    }
+
+    .form-item > textarea + label {
+        font-size: 0.8em;
+        height: 20px;
     }
 
     .form-btn{
         height: 2.5em;
         font-size: 1em;
+    }
+
+    .form-item > :is(textarea:focus, .has-value-text) ~ label {
+        background: #151515;
+        color: rgba(255, 255, 255, 0.75);
+        translate: 0 -60px;
     }
 }
 
@@ -169,8 +204,16 @@
         font-size: 1em;
     }
 
+    .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
+        translate: 0 -35px;
+    }
+
     .form-item > :is(textarea:focus, .has-value-text) ~ label {
-        translate: 0 -60px;
+        translate: 0 -65px;
+    }
+    .form-item > textarea + label {
+        font-size: 1em;
+        height: 25px;
     }
 }
 
