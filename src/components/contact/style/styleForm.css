@@ -198,7 +198,10 @@
     }
 
     .form-item > :is(textarea:focus, .has-value-text) ~ label {
-        translate: 0 -87px;
+        translate: 0 -90px;
     }
 
+    .form-item > textarea{
+        padding: 1em 0 0 0.5em;
+    }
 }
