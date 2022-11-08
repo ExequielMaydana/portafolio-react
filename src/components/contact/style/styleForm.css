@@ -126,6 +126,12 @@
     transition: 200ms ease-out;
 }
 
+.form-item-error{
+    color: #EAEBED;
+    font-size: 1em;
+    text-align: center;
+}
+
 @media screen and (min-width: 420px){
     .form-title {
         font-size: 1.5em;

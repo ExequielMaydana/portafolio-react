@@ -17,6 +17,32 @@ const From = () => {
   const [valueEmail, setValueEmail] = useState("");
   const [valueTextArea, setValueTextArea] = useState("");
 
+  //Para hacer las validaciones del nombre, email, y textarea.
+  const [login, setLogin] = useState('')
+
+  const [errorEmail, setErrorEmail] = useState(false)
+  const [errorName, setErrorName] = useState(false)
+
+  
+
+  const handleClick = () => { 
+    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+    if(valueName.length <= 5 || valueName.length > 10){
+      setErrorName(true)
+      setTimeout(() => {
+        setErrorName(false);
+      }, 5000);
+    } else if(regexEmail.test(valueEmail)){
+        setLogin('submit')
+    }else{
+      setLogin('submit')
+      setErrorEmail(true)
+      setTimeout(() => {
+        setErrorEmail(false);
+      }, 5000);
+    }
+  }
+
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -54,11 +80,15 @@ const From = () => {
               id="textbox"
               type="text"
               autoComplete="off"
+              required={true}
             />
             <span>
               <i className="bx bx-user-circle"></i>
             </span>
             <label htmlFor="textbox">Su nombre</label>
+            <div className="form-item-error">
+            {errorName && 'Introduzca un nombre que tenga entre 5 y 10 caracteres'}
+            </div>
           </div>
           <div className="form-item">
             <input
@@ -71,11 +101,15 @@ const From = () => {
               id="textbox"
               type="text"
               autoComplete="off"
+              required={true}
             />
             <span>
               <i className="bx bx-envelope"></i>
             </span>
             <label htmlFor="textbox">Email</label>
+            <div className="form-item-error">
+              {errorEmail && 'Email invalidó, ejemplo: example@example.com'}
+            </div>
           </div>
           <div className="form-item">
             <textarea
@@ -86,11 +120,13 @@ const From = () => {
               }`}
               value={valueTextArea}
               id="textbox"
+              required={true}
             ></textarea>
             <label htmlFor="textbox">Deje su mensaje aqui...</label>
           </div>
           <button
-            type="submit"
+          onClick={handleClick}
+            type={login}
             className={`form-btn ${theme === "bg-light" && "form-btn-light"}`}
           >
             Submit
