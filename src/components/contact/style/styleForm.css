@@ -7,14 +7,16 @@
 }
 
 .form{
-    width: min(90%, 400px);
+    width: min(90%, 500px);
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.2em;
     background-color: rgba(44, 44, 48, 0.5);
-    padding: 1em;
+    padding: 1em 1em 0 1em ;
     border-radius: 8px;
+    position: relative;
 }
 
 .form-light{
@@ -127,13 +129,19 @@
 }
 
 .form-item-error{
-    padding-top: 0.5em;
     color: #EAEBED;
-    font-size: 1em;
+    font-size: 0.5em;
+    position: absolute;
+    bottom: 4em;
     text-align: center;
 }
 
 @media screen and (min-width: 420px){
+    .form{
+        width: min(90%, 500px);
+        height: 460px;
+    }
+
     .form-title {
         font-size: 1.5em;
         font-weight: 700;
@@ -175,6 +183,11 @@
         background: #151515;
         color: rgba(255, 255, 255, 0.75);
         translate: 0 -60px;
+    }
+
+    .form-item-error{
+        font-size: 1em;
+        bottom: 1em;
     }
 }
 
@@ -222,12 +235,19 @@
         font-size: 1em;
         height: 25px;
     }
+
+    
+    .form-item-error{
+        font-size: 1em;
+        bottom: 2em;
+    }
 }
 
 
 @media screen and (min-width: 992px){
     .form{
         width: 700px;
+        height: 550px;
     }
 
     .form-item > input{
