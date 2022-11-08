@@ -35,9 +35,8 @@ const From = () => {
       }, 5000);
     }if(regexEmail.test(valueEmail)){
       setLogin('submit')
-      setMethod('POST')
     }else{
-      setMethod('null')
+      setMethod('NULL')
       setLogin('null')
       setErrorEmail(true)
       setTimeout(() => {
@@ -68,7 +67,7 @@ const From = () => {
       >
         <form
           className={`form ${theme === "bg-light" && "form-light"}`}
-          method={method}
+          method="POST"
         >
           <input type="hidden" name="form-name" value="contact" method={method} />
           <h3 className="form-title">¡Creemos algo juntos!</h3>
