@@ -127,6 +127,7 @@
 }
 
 .form-item-error{
+    padding-top: 0.5em;
     color: #EAEBED;
     font-size: 1em;
     text-align: center;
