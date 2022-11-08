@@ -54,7 +54,7 @@ const Home = () => {
             >
               <span className="span1">front end.</span>
               <span className="span2">back end.</span>
-              <span className="span3">web develoer.</span>
+              <span className="span3">web developer.</span>
             </div>
           </h1>
 
