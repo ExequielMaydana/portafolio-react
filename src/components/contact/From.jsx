@@ -14,8 +14,10 @@ const From = () => {
   const { theme } = useContext(ThemeContext);
 
   const [valueName, setValueName] = useState("");
-  const [valueEmail, setValueEmail] = useState("");
+  const [valueEmail, setValueEmail] = useState('');
   const [valueTextArea, setValueTextArea] = useState("");
+
+  console.log(valueEmail);
 
   //Para hacer las validaciones del nombre, email, y textarea.
   const [login, setLogin] = useState('')
@@ -27,21 +29,21 @@ const From = () => {
   
 
   const handleClick = () => { 
-    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+    const regexEmail =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
+    const email = valueEmail;
+    console.log(email);
     if(valueName.length <= 5 || valueName.length > 10){
       setErrorName(true)
       setTimeout(() => {
         setErrorName(false);
       }, 5000);
-    }else if(regexEmail.test(valueEmail)){
-      setLogin('submit')
-    }else{
-      setMethod('')
-      setLogin('null')
+    }else if(!regexEmail.test(email)){
       setErrorEmail(true)
       setTimeout(() => {
         setErrorEmail(false);
       }, 5000);
+    }else{
+      setLogin('submit')
     }
   }
 
