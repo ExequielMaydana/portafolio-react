@@ -33,7 +33,7 @@ const From = () => {
       setTimeout(() => {
         setErrorName(false);
       }, 5000);
-    }if(regexEmail.test(valueEmail)){
+    }else if(regexEmail.test(valueEmail)){
       setLogin('submit')
     }else{
       setMethod('NULL')
