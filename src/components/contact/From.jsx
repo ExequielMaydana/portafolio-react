@@ -33,8 +33,9 @@ const From = () => {
         setErrorName(false);
       }, 5000);
     }if(regexEmail.test(valueEmail)){
-        setLogin('submit')
+      setLogin('submit')
     }else{
+      setLogin('')
       setErrorEmail(true)
       setTimeout(() => {
         setErrorEmail(false);
