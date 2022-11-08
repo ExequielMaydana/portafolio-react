@@ -19,6 +19,7 @@ const From = () => {
 
   //Para hacer las validaciones del nombre, email, y textarea.
   const [login, setLogin] = useState('')
+  const [method, setMethod] = useState('')
 
   const [errorEmail, setErrorEmail] = useState(false)
   const [errorName, setErrorName] = useState(false)
@@ -34,8 +35,10 @@ const From = () => {
       }, 5000);
     }if(regexEmail.test(valueEmail)){
       setLogin('submit')
+      setMethod('POST')
     }else{
-      setLogin('')
+      setMethod('null')
+      setLogin('null')
       setErrorEmail(true)
       setTimeout(() => {
         setErrorEmail(false);
@@ -65,9 +68,9 @@ const From = () => {
       >
         <form
           className={`form ${theme === "bg-light" && "form-light"}`}
-          method="POST"
+          method={method}
         >
-          <input type="hidden" name="form-name" value="contact" method="POST" />
+          <input type="hidden" name="form-name" value="contact" method={method} />
           <h3 className="form-title">¡Creemos algo juntos!</h3>
           <div className="form-item">
             <input
