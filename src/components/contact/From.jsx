@@ -27,17 +27,20 @@ const From = () => {
 
   const submit = data => { 
     const regexEmail =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-    if(data.nombre.length <= 5 || data.nombre.length > 10){
+    let name = data.nombre
+    let emailUser = data.email
+    let mensajeUser = data.mensaje
+    if(name.length <= 5 || name.length > 10){
       setErrorName(true)
       setTimeout(() => {
         setErrorName(false);
       }, 5000);
-    }else if(!regexEmail.test(data.email)){
+    }else if(!regexEmail.test(emailUser)){
       setErrorEmail(true)
       setTimeout(() => {
         setErrorEmail(false);
       }, 5000);
-    }else if(data.mensaje.length == 0){
+    }else if(mensajeUser.length == 0){
         setErrorMensaje(true)
         setTimeout(() => {
           setErrorMensaje(false);
