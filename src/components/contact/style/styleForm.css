@@ -46,20 +46,13 @@
     font-size: 13px;
 }
 
-.form-item :is(label, span) {
+.form-item :is(span) {
     position: absolute;
     top: 50%;
     translate: 0 -50%;
     pointer-events: none;
     color: #f9f9f9;
     transition: 0.3s;
-}
-
-.form-item > label {
-    left: 10px;
-    translate: 0 -50%;
-    padding: 0px 10px;
-    font-size: 0.6em;
 }
 
 .form-item > span {
@@ -75,12 +68,6 @@
     color: #f9f9f9;
 }
 
-.form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
-    background: #151515;
-    color: rgba(255, 255, 255, 0.75);
-    translate: 0 -22px;
-}
-
 .form-item > textarea{
     width: 100%;
     height: 60px;
@@ -92,19 +79,8 @@
     border-radius: 8px;
 }
 
-.form-item > textarea + label {
-    font-size: 0.6em;
-    height: 15px;
-}
-
 .form-item > :is(textarea:focus, .has-value-text){
     border-color: #4672f3;
-}
-
-.form-item > :is(textarea:focus, .has-value-text) ~ label {
-    background: #151515;
-    color: rgba(255, 255, 255, 0.75);
-    translate: 0 -40px;
 }
 
 
@@ -150,10 +126,6 @@
     .form-item > input{
         height: 40px;
     }
-
-    .form-item > label {
-        font-size: 0.8em;
-    }
     
     .form-item > span {
         right: 16px;
@@ -161,28 +133,13 @@
     }
     
 
-    .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
-        translate: 0 -30px;
-    }
-
     .form-item > textarea{
         height: 90px;
-    }
-
-    .form-item > textarea + label {
-        font-size: 0.8em;
-        height: 20px;
     }
 
     .form-btn{
         height: 2.5em;
         font-size: 1em;
-    }
-
-    .form-item > :is(textarea:focus, .has-value-text) ~ label {
-        background: #151515;
-        color: rgba(255, 255, 255, 0.75);
-        translate: 0 -60px;
     }
 
     .form-item-error{
@@ -205,9 +162,6 @@
         height: 40px;
     }
 
-    .form-item > label {
-        font-size: 16px;
-    }
     
     .form-item > span {
         right: 16px;
@@ -222,18 +176,6 @@
     .form-btn{
         height: 2.5em;
         font-size: 1em;
-    }
-
-    .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
-        translate: 0 -35px;
-    }
-
-    .form-item > :is(textarea:focus, .has-value-text) ~ label {
-        translate: 0 -65px;
-    }
-    .form-item > textarea + label {
-        font-size: 1em;
-        height: 25px;
     }
 
     
@@ -261,14 +203,6 @@
     .form-btn{
         height: 2.5em;
         font-size: 1em;
-    }
-
-    .form-item > :is(input:focus, .has-value, .has-value-input) ~ label {
-        translate: 0 -40px;
-    }
-
-    .form-item > :is(textarea:focus, .has-value-text) ~ label {
-        translate: 0 -90px;
     }
 
     .form-item > textarea{
