@@ -4,7 +4,6 @@ import ThemeContext from "../utils/ThemeContext";
 import "./style/styleForm.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useForm } from "react-hook-form";
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -14,7 +13,10 @@ const boxVariant = {
 const From = () => {
   const { theme } = useContext(ThemeContext);
 
-  const {handleSubmit, register, reset } = useForm()
+  const [valueName, setValueName] = useState("");
+  const [valueEmail, setValueEmail] = useState('');
+  const [valueTextArea, setValueTextArea] = useState("");
+
 
   //Para hacer las validaciones del nombre, email, y textarea.
   const [login, setLogin] = useState('')
@@ -24,23 +26,25 @@ const From = () => {
   const [errorName, setErrorName] = useState(false)
   const [errorMensaje, setErrorMensaje] = useState(false)
 
+  const regexEmail =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 
-  const submit = data => { 
+  const handleClick = () => { 
     const regexEmail =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-    let name = data.nombre
-    let emailUser = data.email
-    let mensajeUser = data.mensaje
+    const name = valueName
+    const email = valueEmail;
+    const messsageUser = valueTextArea;
+
     if(name.length <= 5 || name.length > 10){
       setErrorName(true)
       setTimeout(() => {
         setErrorName(false);
       }, 5000);
-    }else if(!regexEmail.test(emailUser)){
+    }else if(!regexEmail.test(email)){
       setErrorEmail(true)
       setTimeout(() => {
         setErrorEmail(false);
       }, 5000);
-    }else if(mensajeUser.length == 0){
+    }else if(messsageUser.length == 0){
         setErrorMensaje(true)
         setTimeout(() => {
           setErrorMensaje(false);
@@ -71,7 +75,6 @@ const From = () => {
         className="container-form"
       >
         <form
-          onSubmit={handleSubmit(submit)}
           className={`form ${theme === "bg-light" && "form-light"}`}
           method="POST"
         >
@@ -80,41 +83,55 @@ const From = () => {
           <div className="form-item">
             <input
               name="name"
-              className="has-value has-value-input"
+              onChange={(e) => setValueName(e.target.value)}
+              className={`${valueName ? "has-value has-value-input" : ""} ${
+                theme === "bg-light" && "has-value-light has-value-light"
+              }`}
+              value={valueName}
+              id="textbox"
               type="text"
               autoComplete="off"
               required={true}
-              placeholder="Nombre"
-              {...register("nombre")}
             />
             <span>
               <i className="bx bx-user-circle"></i>
             </span>
+            <label htmlFor="textbox">Su nombre</label>
           </div>
           <div className="form-item">
             <input
               name="email"
-              className="has-value has-value-input"
+              onChange={(e) => setValueEmail(e.target.value)}
+              className={`${valueEmail ? "has-value has-value-input" : ""} ${
+                theme === "bg-light" && "has-value-light has-value-light"
+              }`}
+              value={valueEmail}
+              id="textbox"
               type="email"
               autoComplete="off"
               required={true}
-              placeholder="Email"
-              {...register("email")}
             />
             <span>
               <i className="bx bx-envelope"></i>
             </span>
+            <label htmlFor="textbox">Email</label>
           </div>
           <div className="form-item">
             <textarea
               name="message"
-              className="has-value has-value-input" 
+              onChange={(e) => setValueTextArea(e.target.value)}
+              className={`${valueTextArea ? "has-value-text" : ""} ${
+                theme === "bg-light" && "has-value-text-light"
+              }`}
+              value={valueTextArea}
+              id="textbox"
+              type="message"
               required={true}
-              placeholder="Deposite su mensaje aquí…"
-              {...register("mensaje")}
             ></textarea>
+            <label htmlFor="textbox">Deje su mensaje aqui...</label>
           </div>
           <button
+          onClick={handleClick}
             type={login}
             className={`form-btn ${theme === "bg-light" && "form-btn-light"}`}
           >
