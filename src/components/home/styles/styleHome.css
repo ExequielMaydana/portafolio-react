@@ -4,8 +4,12 @@
     --d3: 8s;
 }
 
-.home {
+#home{
     width: 100%;
+}
+
+.home {
+    min-width: 100%;
     padding: 7em 0 1em 0;
     position: relative;
 }
@@ -101,6 +105,7 @@
 
 
 .name-profession {
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -108,6 +113,7 @@
 
 .name-profession .title{
     text-align: start;
+    padding-left: 0.5em;
 }
 
 .title{
@@ -115,7 +121,6 @@
     color: #EAEBED;
     font-weight: 900;
     font-size: 1em;
-    padding-left: 2px;
 }
 
 .style-light-title{
@@ -328,9 +333,14 @@
 @media screen and (min-width: 420px){
 
     .title{
-        padding-left: 2em;
         font-size: 1.5em;
     }
+
+    .name-profession .title{
+        text-align: start;
+        padding-left: 1em;
+    }
+    
 
     .avatar {
         width: 16rem;
@@ -348,19 +358,18 @@
     .home {
         width: 100%;
         padding: 7em 0 2em 0;
-        position: relative;
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
         justify-content: center;
     }
 
     .title{
-        padding: 0;
         font-size: 1.5em;
     }
 
     .name-profession {
-        padding-left: 4em;
+        width: 80%;
         align-items: center;
     }
 
@@ -369,9 +378,8 @@
         height: 18rem;
     }
 
-
     .redes{
-        width: 10%;
+        width:30%;
     }
 
     .container-icon-redes{
@@ -403,6 +411,22 @@
 
 }
 
+@media screen and (min-width: 830px) {
+    .name-profession {
+        width: 80%;
+        align-items:flex-start;
+    }
+
+    .avatar{
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .redes{
+        width:50%;
+    }
+}
+
 @media screen and (min-width: 992px){
     .home {
         width: 100%;
@@ -411,7 +435,9 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
+        align-items: center;
     }
+
     .container-icon-redes{
         flex-direction: column;
         gap: 1em;
@@ -420,10 +446,6 @@
     .avatar{
         width: 20rem;
         height: 20rem;
-    }
-
-    .name-profession {
-        align-items: flex-start;
     }
 
     .title{
@@ -456,26 +478,17 @@
 @media screen and (min-width: 1228px){
     .home {
         width: 100%;
-        padding: 7em 0 2em 0 ;
-        position: relative;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        gap: 5em;
-    }
-
-    .name-profession{
-        width: 100%;
-        padding-left: 5em;
+        padding-top: 7em;
     }
  
     .title{
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 
     .redes{
-        width: 15%;
+        width: 80%;
     }
+
 
     .list__item{
         width: 70px;
