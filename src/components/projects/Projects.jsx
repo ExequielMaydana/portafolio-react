@@ -170,7 +170,7 @@ const Projects = () => {
               ></i>
             </a>
             <a
-              href="#"
+              href="https://e-commerce-exedev.netlify.app/"
               target="_blank"
               className="project-diploy"
             >
