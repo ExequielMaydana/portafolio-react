@@ -6,7 +6,7 @@ import portadaPoke from "../../assets/imgs/projects-imgs/portada-card-poke.jpg";
 import portadaWeather from '../../assets/imgs/projects-imgs/portada-card-wheater.jpg'
 import imageWeather from '../../assets/imgs/projects-imgs/App-clima.jpg'
 import imagePoke from "../../assets/imgs/projects-imgs/app-poke.jpg";
-import portadaCommerce from '../../assets/imgs/projects-imgs/in-progres-e-commerce.jpg'
+import portadaCommerce from '../../assets/imgs/projects-imgs/partada-e-commer.jpg'
 import imageCommerce from '../../assets/imgs/projects-imgs/e-commerce.jpg'
 import ThemeContext from "../utils/ThemeContext";
 import { motion, useAnimation } from "framer-motion";
