@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import "./styles/styleAbout.css";
-import cv from "../../assets/cv-exequiel-maydana-frontend.pdf";
+import cv from "../../assets/cv-maydana-hernan-exequiel.pdf";
 import ThemeContext from "../utils/ThemeContext";
 import Skills from "../skills/Skills";
 
@@ -104,7 +104,7 @@ const AboutMe = () => {
             </div>
             <div className="container-btn-cv">
               <a
-                download="cv-maydana-FrontendDeveloper"
+                download="cv-maydana-hernan-exequiel"
                 href={cv}
                 className={`btn ${theme === "bg-light" ? "btn-light" : "btn"}`}
               >
