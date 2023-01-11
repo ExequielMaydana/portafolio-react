@@ -16,10 +16,7 @@
     font-size: 2em;
     font-weight: 700;
     border-bottom: 1px solid #4672f3;
-}
-
-.projects-title-light{
-    border-bottom: 1px solid #7844E3;
+    color: #EAEBED;
 }
 
 .container-card-projects{
@@ -39,10 +36,6 @@
     flex-direction: column;
     background-color: rgba(44, 44, 48, 0.5);
     border-radius: 0.2em;
-}
-
-.card-project-light{
-    background-color: #2A3240;
 }
 
 .container-img-project{
@@ -137,10 +130,6 @@
     transform: scale(1.10);
 }
 
-.project-github:hover .project-code-light{
-    color: #7844E3;
-}
-
 .project-diploy:hover p{
     visibility: visible;
     transition: 200ms ease-in;
@@ -150,10 +139,6 @@
     color: #4672f3;
     transition: 200ms ease-in;
     transform: scale(1.10);
-}
-
-.project-diploy:hover .project-probe-light{
-    color: #7844E3;
 }
 
 @media screen and (min-width: 420px){
@@ -188,10 +173,6 @@
     .projects-title{
         font-size: 3em;
         border-bottom: 2px solid #4672f3;
-    }
-
-    .projects-title-light{
-        border-bottom: 2px solid #7844E3;
     }
 
     .container-img-project{

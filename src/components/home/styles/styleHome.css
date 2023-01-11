@@ -27,11 +27,6 @@
     border-radius: 50%;
 }
 
-/* este estilo se aplica cuando el background cambie a light */
-.home .style-light-circle{
-    background-color: rgba(22, 59, 133, 0.5);
-}
-
 .home .div-circle1{
     position: absolute;
     top: 200px;
@@ -47,11 +42,6 @@
     transform: rotate(45deg);
 }
 
-/* este estilo se aplica cuando el background cambie a light */
-.home .style-light-circle1{
-    background-color: rgb(0, 217, 255, 0.5);
-}
-
 .home .div-circle2{
     position: absolute;
     bottom: 10px;
@@ -61,11 +51,6 @@
     background-color: rgba(60, 65, 75, 0.5);
     opacity: 1;
     border-radius: 50%;
-}
-
-/* este estilo se aplica cuando el background cambie a light */
-.home .style-light-circle2{
-    background-color: rgba(120, 68, 227, 0.5);
 }
 
 .home .div-cuadrado{
@@ -83,11 +68,6 @@
     transform: rotate(45deg);
 }
 
-.home .style-light-cuadrado{
-    background-color: rgb(247, 244, 75, 0.5);
-    border: none;
-}
-
 .home .div-cuadrado1{
     position: absolute;
     top: 130px;
@@ -98,11 +78,6 @@
     opacity: 1;
     border-radius: 1px;
 }
-
-.home .style-light-cuadrado1{
-    background-color: #7844E3;
-}
-
 
 .name-profession {
     width: 100%;
@@ -122,11 +97,6 @@
     font-weight: 900;
     font-size: 1em;
 }
-
-.style-light-title{
-    color: #17181C;
-}
-
 
 .rotate-words{
     display: inline;
@@ -155,10 +125,6 @@
     transform-origin: 10% 75%;
     animation: rotateWords 12s linear infinite;
     border-radius: 2px;
-}
-
-.rotate-words-light span {
-    background-color: #7844E3;
 }
 
 @keyframes rotateWords{
@@ -200,10 +166,6 @@
 
     animation: glitch 3.75s infinite steps(1);
     filter: drop-shadow(1px 1px 2px #4672f3);
-}
-
-.avatar-light{
-    filter: drop-shadow(1px 1px 2px #7844E3);
 }
 
 @keyframes glitch {
@@ -263,19 +225,8 @@
     align-items: center;
 }
 
-/* este estilo se aplica cuando el background cambie a light */
-.list__item-light{
-    outline: 2px solid #17181C;
-    box-shadow: 0px 1px 6px #7844E3;
-}
-
 .list__link{
     color: #EAEBED;
-}
-
-/* este estilo se aplica cuando el background cambie a light */
-.list_link-light{
-    color: #17181C;
 }
 
 .list__item:hover{
@@ -396,11 +347,6 @@
         color: #EAEBED;
     }
     
-    /* este estilo se aplica cuando el background cambie a light */
-    .list_link-light{
-        color: #17181C;
-    }
-    
     .list__item:hover{
         outline-offset: 5px;
     }
@@ -461,11 +407,6 @@
         color: #EAEBED;
     }
     
-    /* este estilo se aplica cuando el background cambie a light */
-    .list_link-light{
-        color: #17181C;
-    }
-    
     .list__item:hover{
         outline-offset: 5px;
     }
@@ -497,11 +438,6 @@
     
     .list__link{
         color: #EAEBED;
-    }
-    
-    /* este estilo se aplica cuando el background cambie a light */
-    .list_link-light{
-        color: #17181C;
     }
     
     .list__item:hover{

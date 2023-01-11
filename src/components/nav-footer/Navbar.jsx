@@ -1,16 +1,12 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import "./styles/styleNavbar.css";
 import logoNav from "../../assets/logos/logo-navbar.png";
-import ThemeContext from "../utils/ThemeContext";
 
 const Navbar = () => {
   const navbarOpen = useRef();
   const lineOneActive = useRef();
   const lineTwoActive = useRef();
   const lineThreeActive = useRef();
-
-  const openSettings = useRef();
-  const rotateSettings = useRef();
 
   const openMenu = () => {
     navbarOpen.current?.classList.toggle("openMenu");
@@ -26,7 +22,6 @@ const Navbar = () => {
     lineThreeActive.current?.classList.toggle("activeLine3");
   };
 
-  const { theme, updateTheme } = useContext(ThemeContext);
   return (
     <header className="header">
       <div className="logo-container">
@@ -71,40 +66,10 @@ const Navbar = () => {
               Contacto
             </a>
           </li>
-
-          <li className="darkmode">
-            <ul className="container-dark">
-              <li className="mode">
-                <label form="checkbox" className="toggler">
-                  <input type="checkbox" id="checkbox" />
-                  <span
-                    className="ball"
-                    onClick={() =>
-                      theme === "bg-dark"
-                        ? updateTheme("bg-light")
-                        : updateTheme("bg-dark")
-                    }
-                  ></span>
-                  <i className="fa-solid fa-moon moon"></i>
-                  <i className="fa-solid fa-sun sun"></i>
-                </label>
-              </li>
-            </ul>
-          </li>
         </ul>
         <footer className="nav-footer">
-          <div
-            className={`nav-footer-text ${
-              theme === "bg-light" ? "nav-footer-text-light" : "nav-footer-text"
-            }`}
-          >
-            <span
-              className={`footer-separation ${
-                theme === "bg-light"
-                  ? "footer-separation-light"
-                  : "footer-separation"
-              }`}
-            ></span>
+          <div className="nav-footer-text">
+            <span className="footer-separation"></span>
             <p>
               &copy; Exequiel Maydana <b>Developer.</b>
             </p>

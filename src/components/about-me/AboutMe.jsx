@@ -1,9 +1,7 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./styles/styleAbout.css";
 import cv from "../../assets/cv-maydana-hernan-exequiel.pdf";
-import ThemeContext from "../utils/ThemeContext";
 import Skills from "../skills/Skills";
-
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -13,8 +11,6 @@ const boxVariant = {
 };
 
 const AboutMe = () => {
-  const { theme } = useContext(ThemeContext);
-
   //?useAnimation
   /* Hago uso del gancho useAnimation de framer-motion para activar la animacion
     del componente cuando entre a la ventana grafica.
@@ -45,38 +41,18 @@ const AboutMe = () => {
         animate={control}
         className="about-skill"
       >
-        <section
-          className={`container-about ${
-            theme === "bg-light" ? "container-about-light" : "container-about"
-          }`}
-        >
+        <section className="container-about">
           <div className="about-circle"></div>
           <div className="about-circle1"></div>
           <div className="about-circle2"></div>
           <div className="about-cuadrado"></div>
           <div className="about-cuadrado1"></div>
 
-          <div
-            className={`container-textAbout ${
-              theme === "bg-light"
-                ? "container-textAbout-light"
-                : "container-textAbout"
-            }`}
-          >
+          <div className="container-textAbout">
             <div className="text-title">
-              <h2
-                className={`title-about ${
-                  theme === "bg-light" ? "title-about-light" : "title-about"
-                }`}
-              >
-                Sobre mi
-              </h2>
+              <h2 className="title-about">Sobre mi</h2>
             </div>
-            <div
-              className={`text-history ${
-                theme === "bg-light" ? "text-history-light" : "text-history"
-              }`}
-            >
+            <div className="text-history">
               <p>
                 Hola, mi nombre es Exequiel, tengo amplia experiencia con HTML,
                 CSS, JavaScript, y React. Tambien tengo conocimientos
@@ -106,7 +82,7 @@ const AboutMe = () => {
               <a
                 download="cv-maydana-hernan-exequiel"
                 href={cv}
-                className={`btn ${theme === "bg-light" ? "btn-light" : "btn"}`}
+                className="btn"
               >
                 Descargar cv
               </a>
